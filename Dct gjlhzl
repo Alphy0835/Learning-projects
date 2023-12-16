@@ -1,0 +1,31 @@
+n = int(input())
+count_3 = 0
+last_digit_n = n%10
+last_digit_count = 0 
+count_even = 0
+sm5 = 0
+mt7 = 1
+count_0_5 = 0
+
+while n >0:
+    if n%10 == 3:
+        count_3+=1
+    if n%10 == last_digit_n:
+        last_digit_count+=1
+    if (n%10)%2 == 0:
+        count_even+=1
+        print('c')
+    if n%10 > 5:
+        sm5+=n%10
+    if n%10>7:
+        mt7*=n%10
+    if n%10==0 or n%10==5:
+        count_0_5+=1
+    n//=10
+    
+print(count_3)
+print(last_digit_count)
+print(count_even)
+print(sm5)
+print(mt7)
+print(count_0_5)
